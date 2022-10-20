@@ -534,13 +534,16 @@ Will become: ::
 
 Don't include line breaks within ``<p>`` blocks.  ie do this: ::
 
+  ```html
   <p>Blah foo blah</p>
   <p>New paragraph, blah</p>
+  ```
 
 And **not**: ::
-
+  ```html
   <p>Blah foo blah
      New paragraph, blah</p>
+    ```
 
 
 ## HTML Table
