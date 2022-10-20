@@ -530,39 +530,4 @@ Will become: ::
 
 
 
----------------------------
-Targeting Internet Explorer
----------------------------
-
-Targeting lower versions of Internet Explorer (IE), those below version 9,
-should be handled by the stylesheets. Small fixes should be provided inline
-using the ``.ie`` specific class names. Larger fixes may require a separate
-stylesheet but try to avoid this if at all possible.
-
-Adding IE specific classes: ::
-
-    <!DOCTYPE html>
-    <!--[if lt IE 7]> <html lang="en" class="ie ie6"> <![endif]-->
-    <!--[if IE 7]>    <html lang="en" class="ie ie7"> <![endif]-->
-    <!--[if IE 8]>    <html lang="en" class="ie ie8"> <![endif]-->
-    <!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
-
-.. note:: Only add lines for classes that are actually being used.
-
-These can then be used within the CSS: ::
-
-    .clear:before,
-    .clear:after {
-        content: "";
-        display: table;
-    }
-
-    .clear:after {
-        clear: both;
-    }
-
-    .ie7 .clear {
-        zoom: 1; /* For IE 6/7 (trigger hasLayout) */
-    }
-
 
