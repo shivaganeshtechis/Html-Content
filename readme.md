@@ -426,10 +426,8 @@ Instead of just throwing text in the footer tag let us add a _small_ HTML tag to
   </body>
 </html>
 ```
-=====================
-HTML coding standards
-=====================
 
+### HTML coding standards
 
 
 ----------
@@ -499,9 +497,7 @@ tailored inputs and keyboards. ::
       <input type="url" id="field-url" name="url" value="" placeholder="http://example.com">
     </div>
 
-Wufoo provides an `excellent reference`_ for these attributes.
 
-.. _excellent reference: http://wufoo.com/html5/
 
 -------------------
 Including meta data
@@ -532,10 +528,7 @@ Will become: ::
     jQuery('.btn').data('fileFormat'); //=> "csv"
     jQuery('.btn').data(); => {fileFormat: "csv"}
 
-Ideally you should be using `CKAN's JavaScript module`_ format for defining
-how JavaScript is initiated and interacts with the DOM.
 
-.. _CKAN's JavaScript module: ./frontend/javascript-module-tutorial.html
 
 ---------------------------
 Targeting Internet Explorer
@@ -572,16 +565,4 @@ These can then be used within the CSS: ::
         zoom: 1; /* For IE 6/7 (trigger hasLayout) */
     }
 
-----
-i18n
-----
 
-Don't include line breaks within ``<p>`` blocks.  ie do this: ::
-
-  <p>Blah foo blah</p>
-  <p>New paragraph, blah</p>
-
-And **not**: ::
-
-  <p>Blah foo blah
-     New paragraph, blah</p>
