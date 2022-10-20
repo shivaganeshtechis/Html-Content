@@ -543,7 +543,7 @@ And **not**: ::
   ```html
   <p>Blah foo blah
      New paragraph, blah</p>
-    ```
+  ```
 
 
 ## HTML Table
