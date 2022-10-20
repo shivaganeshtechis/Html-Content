@@ -1,4 +1,5 @@
 ## Parts of a website
+
 A website can have a couple of features or several features. There is no guideline that tells what a website should have but most of the time a website has the following common parts(components). For instance, if you look at the [first ever created website](http://info.cern.ch/hypertext/WWW/TheProject.html), it has just one page and several links. However, since 1993 to today, for the last three decades HTML has been evolving and with only HTML it is possible to develop a decent static website.
 
 Let's see the most common parts(components) of a website:
@@ -32,7 +33,7 @@ The word HTML is an acronym. That is stands for Hypertext Markup Language. It is
 
 HTML code will be rendered by a browser and it give a human readable output. Look at the figure bellow to understand better how the HTML code convert to a website using a browser.
 
-![](images/html_code_output.png)
+![](images/temp.png)
 
 ### HTML Element
 
@@ -41,17 +42,17 @@ Look at the figure below to understand a syntax of an HTML element.
 
 ![Open and Close tag without attribute](./images/tag.png)
 
-```html
+````html
 <h1>I am Learning HTML from TECH I.S</h1>
 
-The tag name is _h1_ and the content is _30 Days of HTML_. The h1 will tell the browser to make the text a big font size that why we call HTML a markup language.
-
-```html
+The tag name is _h1_ and the content is _30 Days of HTML_. The h1 will tell the
+browser to make the text a big font size that why we call HTML a markup
+language. ```html
 <p>
   HTML elements are the blocking of a website. There is not website without
   HTML. Learn HTML and build a website.
 </p>
-```
+````
 
 The _p_ tag marks the text to be paragraph that why we call HTML a markup language.
 
@@ -134,7 +135,7 @@ Comment in any programming language help a code to be more readable. Therefore, 
 <!-- The is an HTML comment and it makes the code more readable -->
 ```
 
-## HTML Structure 
+## HTML Structure
 
 In this section, we will start writing the DOM tree of an HTML document or file. DOM stands for Document Object Model. The DOM is structure like a true. It starts with an _html_ root element followed by head and body. The head and the body are the immediate children of the root element, _html_. Before the root element, there is a declaration.
 
@@ -396,6 +397,7 @@ There is a _footer_ HTML tag to make a footer. Let us create footer for the web 
   </body>
 </html>
 ```
+
 Instead of just throwing text in the footer tag let us add a _small_ HTML tag to wrap the text and it will be render to a small size text.
 
 ```html
@@ -429,10 +431,9 @@ Instead of just throwing text in the footer tag let us add a _small_ HTML tag to
 
 ### HTML coding standards
 
+---
 
-----------
-Formatting
-----------
+## Formatting
 
 All HTML documents must use **two spaces** for indentation and there should be
 no trailing whitespace. HTML5 syntax must be used and all attributes must use
@@ -442,17 +443,17 @@ double quotes around attributes. ::
       <source src="foo.ogg" type="video/ogg">
     </video>
 
-HTML5 elements should be used where appropriate reserving ``<div>`` and
-``<span>`` elements for situations where there is no semantic value (such as
+HTML5 elements should be used where appropriate reserving `<div>` and
+`<span>` elements for situations where there is no semantic value (such as
 wrapping elements to provide styling hooks).
 
-------------------
-Doctype and layout
-------------------
+---
 
-All documents must be using the HTML5 doctype and the ``<html>`` element should
-have a ``"lang"`` attribute. The ``<head>`` should also at a minimum include
-``"viewport"`` and ``"charset"`` meta tags. ::
+## Doctype and layout
+
+All documents must be using the HTML5 doctype and the `<html>` element should
+have a `"lang"` attribute. The `<head>` should also at a minimum include
+`"viewport"` and `"charset"` meta tags. ::
 
     <!DOCTYPE html>
     <html lang="en">
@@ -464,20 +465,20 @@ have a ``"lang"`` attribute. The ``<head>`` should also at a minimum include
       <body></body>
     </html>
 
------
-Forms
------
+---
 
-Form fields must always include a ``<label>`` element with a ``"for"`` attribute
-matching the ``"id"`` on the input. This helps accessibility by focusing the
+## Forms
+
+Form fields must always include a `<label>` element with a `"for"` attribute
+matching the `"id"` on the input. This helps accessibility by focusing the
 input when the label is clicked, it also helps screen readers match labels to
 their respective inputs. ::
 
     <label for="field-email">email</label>
     <input type="email" id="field-email" name="email" value="" />
 
-Each ``<input>`` should have an ``"id"`` that is unique to the page. It does not
-have to match the ``"name"`` attribute.
+Each `<input>` should have an `"id"` that is unique to the page. It does not
+have to match the `"name"` attribute.
 
 Forms should take advantage of the new HTML5 input types where they make sense
 to do so, placeholder attributes should also be included where relevant.
@@ -497,19 +498,17 @@ tailored inputs and keyboards. ::
       <input type="url" id="field-url" name="url" value="" placeholder="http://example.com">
     </div>
 
+---
 
-
--------------------
-Including meta data
--------------------
+## Including meta data
 
 Classes should ideally only be used as styling hooks. If you need to include
 additional data in the HTML document, for example to pass data to JavaScript,
-then the HTML5 ``data-`` attributes should be used. ::
+then the HTML5 `data-` attributes should be used. ::
 
     <a class="btn" data-format="csv">Download CSV</a>
 
-These can then be accessed easily via jQuery using the ``.data()`` method. ::
+These can then be accessed easily via jQuery using the `.data()` method. ::
 
     jQuery('.btn').data('format'); //=> "csv"
 
@@ -517,7 +516,7 @@ These can then be accessed easily via jQuery using the ``.data()`` method. ::
     jQuery('.btn').data(); => {format: "csv"}
 
 One thing to note is that the JavaScript API for datasets will convert all
-attribute names into camelCase. So ``"data-file-format"`` will become ``fileFormat``.
+attribute names into camelCase. So `"data-file-format"` will become `fileFormat`.
 
 For example: ::
 
@@ -528,23 +527,22 @@ Will become: ::
     jQuery('.btn').data('fileFormat'); //=> "csv"
     jQuery('.btn').data(); => {fileFormat: "csv"}
 
--------------------
-``<p>`` blocks
--------------------
+---
 
-Don't include line breaks within ``<p>`` blocks.  ie do this: ::
+## `<p>` blocks
 
-  ```html
-  <p>Blah foo blah</p>
-  <p>New paragraph, blah</p>
-  ```
+Don't include line breaks within `<p>` blocks. ie do this: ::
+
+```html
+<p>Blah foo blah</p>
+<p>New paragraph, blah</p>
+```
 
 And **not**: ::
-  ```html
-  <p>Blah foo blah
-     New paragraph, blah</p>
-  ```
 
+```html
+<p>Blah foo blah New paragraph, blah</p>
+```
 
 ## HTML Table
 
@@ -703,6 +701,3 @@ The author of this challenge creates different challenges every year. Let us put
 ```
 
 Try the output the above code on visual studio
-
-
-
