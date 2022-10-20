@@ -1,3 +1,4 @@
+## Parts of a website
 A website can have a couple of features or several features. There is no guideline that tells what a website should have but most of the time a website has the following common parts(components). For instance, if you look at the [first ever created website](http://info.cern.ch/hypertext/WWW/TheProject.html), it has just one page and several links. However, since 1993 to today, for the last three decades HTML has been evolving and with only HTML it is possible to develop a decent static website.
 
 Let's see the most common parts(components) of a website:
@@ -391,7 +392,7 @@ There is a _footer_ HTML tag to make a footer. Let us create footer for the web 
         </p>
       </section>
     </main>
-    <footer>Copyright 2021 | Asabeneh Yetayeh</footer>
+    <footer>Copyright</footer>
   </body>
 </html>
 ```
@@ -420,7 +421,7 @@ Instead of just throwing text in the footer tag let us add a _small_ HTML tag to
       </section>
     </main>
     <footer>
-      <small>Copyright 2021 | Asabeneh Yetayeh</small>
+      <small>Copyright </small>
     </footer>
   </body>
 </html>
